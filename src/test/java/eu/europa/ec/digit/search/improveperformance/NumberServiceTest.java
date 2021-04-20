@@ -34,7 +34,7 @@ class NumberServiceTest {
         start = System.currentTimeMillis();
         Integer duplicateFast = numberService.findSmallestDuplicateImproved(data);
         long tookFast = System.currentTimeMillis() - start;
-        
+        log.info("slow: {}, fast: {}", tookSlow, tookFast);
         assertEquals(duplicateSlow, duplicateFast);
         assertTrue(tookSlow > tookFast*1000);
         log.info("slow: {}, fast: {}", tookSlow, tookFast);
